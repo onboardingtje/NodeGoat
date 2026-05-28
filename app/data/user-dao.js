@@ -88,7 +88,9 @@ function UserDAO(db) {
             }
         };
 
-        
+        usersCol.findOne({
+            userName: userName
+        }, validateUserDoc);
     };
 
     // This is the good one, see the next function
